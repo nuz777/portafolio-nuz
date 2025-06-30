@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Website</title>
+  <title>Pagina de Nuz_v</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
@@ -16,7 +16,7 @@
       <a href="#animes">Animes vistos</a>
       <a href="#">Tips games</a>
       <a href="#">Quien era Nuz_v</a>
-      <a href="#">Contact</a>
+    
     </nav>
   </header>
 
@@ -44,9 +44,12 @@
     <div class="anime-container">
       <!-- Tarjeta 1 -->
       <div class="anime-card">
-        <img src="/974.jpg" alt="Attack on Titan" class="anime-cover">
-        <div class="hover-overlay"><h3>Mahou shouho lyrical nanoha</h3></div>
-        <p class="hidden-desc">Humanidad contra titanes, secretos, traiciones y una animación brutal.</p>
+      <img src="/nanoha.jpg"  class="anime-cover">
+        <div class="hover-overlay"><h3>Mahou shoujo lyrical nanoha</h3></div>
+        <p class="hidden-desc">Nanoha está rota, eso no se discute en lo absoluto. Es una chica magica cuya fuente de poder
+           es un baston llamado resing heater. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+          
+        </p>
         <span class="hidden-rating">⭐ 9.5/10</span>
       </div>
 
@@ -163,18 +166,28 @@
       });
     });
 
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-      document.body.classList.remove("modal-open");
-    });
+  closeBtn.addEventListener("click", () => {
+  modal.classList.add("fade-out");
+  setTimeout(() => {
+    modal.style.display = "none";
+    modal.classList.remove("fade-out");
+    document.body.classList.remove("modal-open");
+  }, 300); // tiempo igual al de la animación
+});
 
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-        document.body.classList.remove("modal-open");
-      }
-    });
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.add("fade-out");
+    setTimeout(() => {
+      modal.style.display = "none";
+      modal.classList.remove("fade-out");
+      document.body.classList.remove("modal-open");
+    }, 300);
+  }
+});
+
   </script>
 </body>
 </html>
+
 
